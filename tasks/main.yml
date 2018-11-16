@@ -1,6 +1,5 @@
 ---
 - name: be sure packages are installed - {{ packages | join(', ') }}
   yum:
-    name: '{{ item }}'
+    name: "{{ packages }}"
     state: latest
-  with_items: '{{ packages }}'
